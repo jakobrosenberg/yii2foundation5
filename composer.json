@@ -1,0 +1,22 @@
+{
+    "name": "simpletree/yii2foundation5",
+    "type": "yii2-extension",
+    "require": {
+        "yiisoft/yii2": "*",
+        "zurb/foundation": "dev-master"
+    },
+    "description": "Foundation 5 extension for Yii 2.",
+    "keywords": ["yii", "foundation", "scss"],
+    "license": "GPL2",
+    "authors": [
+        {
+            "name": "Jakob Rosenberg",
+            "email": "jakobrosenberg@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "simpletree\\foundation\\": "src/"
+        }
+    }
+}
