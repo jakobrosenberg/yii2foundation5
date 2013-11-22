@@ -62,15 +62,9 @@ class Widget extends \yii\base\Widget
     public function registerPlugin($name)
     {
         $view = $this->getView();
-
-        $Asset = FoundationPluginAsset::register($view);
-
-        $view->registerJsFile($Asset->baseUrl.'/js/foundation/foundation.'.$name.'.js', array('position'=>$view::POS_END));
+		require_once('FoundationPluginAsset.php');
+		call_user_func('\simpletree\foundation5\Foundation'.ucwords($name).'Asset::register', $view);
     }
-
-
-
-
-
-
 }
+
+

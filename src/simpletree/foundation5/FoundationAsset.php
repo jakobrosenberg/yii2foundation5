@@ -37,7 +37,7 @@ class FoundationAsset extends AssetBundle
     public $foundationProjectDir = __DIR__;
     public $compileExtention = 'scss';
 
-	public $sourcePath = '@Simpletree/Foundation/assets';
+	public $sourcePath = '@simpletree/foundation5/assets';
 
     public $js = array(
         'js/vendor/custom.modernizr.js',
