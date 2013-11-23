@@ -7,7 +7,7 @@
 
 namespace simpletree\foundation5;
 
-use yii\base\View;
+use yii\web\View;
 use yii\web\AssetBundle;
 
 \Yii::setAlias('simpletree/foundation5',__DIR__);
@@ -20,7 +20,7 @@ class FoundationPluginAsset extends AssetBundle
 	public $sourcePath = '@vendor/zurb/foundation/js';
 	public $js = array(
 		'foundation/foundation.js',
-		'foundation/foundation.forms.js',
+//		'foundation/foundation.forms.js',
 	);
 	public $depends = array(
 		'yii\web\JqueryAsset',

@@ -8,7 +8,7 @@
 namespace simpletree\foundation5;
 
 use yii\base\ErrorException;
-use yii\base\View;
+use yii\web\View;
 
 class Reveal extends Widget{
 
@@ -41,7 +41,7 @@ class Reveal extends Widget{
     public function init()
     {
         if(empty($this->label))
-            throw new ErrorException('label can\'t be empty');
+            throw new ErrorException('"label" can\'t be empty');
         $this->renderLink();
         ob_start();
         ob_implicit_flush(false);

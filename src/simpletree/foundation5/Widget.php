@@ -8,7 +8,7 @@
 namespace simpletree\foundation5;
 
 use Yii;
-use yii\base\View;
+use yii\web\View;
 use yii\helpers\Json;
 
 /**
