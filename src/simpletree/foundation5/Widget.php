@@ -28,8 +28,6 @@ class Widget extends \yii\base\Widget
 	/**
 	 * @var array the options for the underlying Foundation JS plugin.
 	 * Please refer to the corresponding Foundation plugin Web page for possible options.
-	 * For example, [this page](http://twitter.github.io/bootstrap/javascript.html#modals) shows
-	 * how to use the "Modal" plugin and the supported options (e.g. "remote").
 	 */
     //todo fix description
 	public $clientOptions = array();
@@ -62,8 +60,7 @@ class Widget extends \yii\base\Widget
     public function registerPlugin($name)
     {
         $view = $this->getView();
-		require_once('FoundationPluginAsset.php');
-		call_user_func('\simpletree\foundation5\Foundation'.ucwords($name).'Asset::register', $view);
+		call_user_func('\simpletree\foundation5\bundles\Foundation'.ucwords($name).'Asset::register', $view);
     }
 }
 

@@ -7,13 +7,8 @@
 namespace simpletree\foundation5;
 
 
-
-use Yii;
-use yii\web\View;
 use yii\web\AssetBundle;
-use yii\helpers\ArrayHelper;
-use yii\base\InvalidConfigException;
-use yii\base\ErrorException;
+use Yii;
 
 
 /**
@@ -22,17 +17,12 @@ use yii\base\ErrorException;
 class FoundationAsset extends AssetBundle
 {
 	public $sourcePath = '@simpletree/foundation5/assets';
-
-	public $css = array(
-//		'css/app.css',
-	);
-    public $jsOptions = array(
-        'position'=>View::POS_HEAD
-    );
-
+	public $css = ['foundation.css'];
 	public $depends = [
+		'yii\web\JqueryAsset',
 		'simpletree\foundation5\bundles\FoundationModernizrAsset',
-		'simpletree\foundation5\bundles\FoundationStylesheetAsset'
+		'simpletree\foundation5\bundles\FoundationJsAsset',
+		'simpletree\foundation5\bundles\FoundationFormsAsset',
 	];
 
 	public function registerAssetFiles($view)
@@ -40,9 +30,9 @@ class FoundationAsset extends AssetBundle
 		$view->registerMetaTag([
 			"name" => "viewport",
 			"content" => "initial-scale=1.0"]);
+		$view->registerJs('$(document).foundation();', $view::POS_END);
 		parent::registerAssetFiles($view);
 	}
-
 
 }
 

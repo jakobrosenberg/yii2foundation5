@@ -69,6 +69,7 @@ class Reveal extends Widget{
     public function renderOpeningTags()
     {
         $this->options['id'] = $this->id;
+		$this->options['data-reveal']=true;
         Html::addCssClass($this->options, 'reveal-modal');
         echo Html::beginTag('div', $this->options);
     }
